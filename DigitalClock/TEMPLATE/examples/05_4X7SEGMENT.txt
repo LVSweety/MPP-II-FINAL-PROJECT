@@ -1,0 +1,53 @@
+
+#define F_CPU 16000000
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+
+//bez punkta
+#define DIG0	0b01111110 
+#define DIG1 	0b00001100 
+#define DIG2 	0b10110110 
+#define DIG3 	0b10011110 
+#define DIG4 	0b11001100 
+#define DIG5	0b11011010 
+#define DIG6	0b11111010 
+#define DIG7 	0b00001110 
+#define DIG8	0b11111110 
+#define DIG9	0b11011110 
+
+#define CCA0	0b00000001
+#define CCA1	0b00000010
+#define CCA2	0b00000100
+#define CCA3	0b00001000
+
+int main(void)
+{
+  	DDRD = 0xFF;
+	DDRB = 0x0F;
+  
+  	PORTB = 0x0F;
+  
+ 	uint8_t BCD [10] = {DIG0, DIG1, DIG2, DIG3, DIG4, DIG5, DIG6, DIG7, DIG8, DIG9};
+  	uint8_t CCA [4] = {CCA0, CCA1, CCA2, CCA3};    
+  
+	while (1)
+	{ 	
+      	PORTB = CCA [0];
+      	PORTD = BCD [4];
+      	_delay_ms(2);
+
+        PORTB = CCA [1];
+      	PORTD = BCD [3];
+      	_delay_ms(2);
+
+        PORTB = CCA [2];
+      	PORTD = BCD [2];
+      	_delay_ms(2);
+      
+    	PORTB = CCA [3];
+      	PORTD = BCD [1];
+      	_delay_ms(2);  
+	}
+}

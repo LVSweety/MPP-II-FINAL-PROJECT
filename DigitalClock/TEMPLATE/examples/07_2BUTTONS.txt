@@ -1,0 +1,22 @@
+#include <avr/io.h>
+
+int main(void){
+	
+	DDRB = 0x21;
+	PORTB |= ((1 << PINB7) | (1 << PINB0));
+	
+	while (1) {
+		if(!(PINB & (1<<PINB7))){
+			while(!(PINB & (1<<PINB7)));
+			PORTB |= (1 << PINB5);
+			
+		}
+		
+		if(!(PINB & (1<<PINB0))){
+			while(!(PINB & (1<<PINB0)));
+			PORTB &= ~(1 << PINB5);
+			
+		}
+	}
+}
+

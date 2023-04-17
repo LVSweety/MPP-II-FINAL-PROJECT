@@ -1,0 +1,53 @@
+#ifndef ATMEGA328P_TIM
+#define ATMEGA328P_TIM
+
+#include <avr/io.h>
+
+#define OCR1A_NORMAL					15625
+#define OCR1A_DOUBLE					31259
+#define OCR1A_HALF						7812
+
+#define TIM0_DEACTIVE					0x00
+#define TIM0_PRESCALING_FACTOR_1		0x01
+#define TIM0_PRESCALING_FACTOR_8		0x02
+#define TIM0_PRESCALING_FACTOR_64		0x03
+#define TIM0_PRESCALING_FACTOR_256		0x04
+#define TIM0_PRESCALING_FACTOR_1024		0x05
+
+#define TIM1_DEACTIVE					0x00
+#define TIM1_PRESCALING_FACTOR_1		0x01
+#define TIM1_PRESCALING_FACTOR_8		0x02
+#define TIM1_PRESCALING_FACTOR_64		0x03
+#define TIM1_PRESCALING_FACTOR_256		0x04
+#define TIM1_PRESCALING_FACTOR_1024		0x05
+
+#define TIM2_DEACTIVE					0x00
+#define TIM2_PRESCALING_FACTOR_1		0x01
+#define TIM2_PRESCALING_FACTOR_8		0x02
+#define TIM2_PRESCALING_FACTOR_32		0x03
+#define TIM2_PRESCALING_FACTOR_64		0x04
+#define TIM2_PRESCALING_FACTOR_128		0x05
+#define TIM2_PRESCALING_FACTOR_256		0x06
+#define TIM2_PRESCALING_FACTOR_1024		0x07
+
+typedef enum{
+	TIM0_START,
+	TIM1_START,
+	TIM2_START,
+
+}TIM_StateStart;
+
+typedef enum{
+	TIM0_STOP,
+	TIM1_STOP,
+	TIM2_STOP
+
+}TIM_StateStop;
+
+void MY_TIM0_Init();
+void MY_TIM1_Init();
+void MY_TIM2_Init();
+void MY_TIMX_Start(uint8_t pTIMxNameState, uint8_t pPrescalerFactor);
+void MY_TIMX_Stop(uint8_t pTIMxNameState);
+
+#endif

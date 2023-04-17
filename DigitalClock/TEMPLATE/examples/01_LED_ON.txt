@@ -1,0 +1,11 @@
+#include <avr/io.h>
+
+int main(void){
+	
+	DDRB |= (1 << PIND5);
+	PORTB = (1 << PIND5);
+	
+	while (1) {
+		
+	}
+}
