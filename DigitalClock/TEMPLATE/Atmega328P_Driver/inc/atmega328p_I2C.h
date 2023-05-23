@@ -3,7 +3,6 @@
 
 #include <avr/io.h>
 
-//P5.1.1.
 #define I2C_CLOCK_FREQUENCY_400_kHz             0x0C    // MCU running @ 16MHz
 #define I2C_MT_START_CONDITION_TX               0x08	//	A START condition has been transmitted
 #define I2C_MT_REPEATED_START_CONDITION_TX	    0x10	//	A repeated START condition has been transmitted

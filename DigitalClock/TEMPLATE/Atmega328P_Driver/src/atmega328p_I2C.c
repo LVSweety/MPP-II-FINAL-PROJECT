@@ -14,8 +14,7 @@ void I2C_Start(){
 	TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
 	while (!(TWCR & (1 << TWINT)));
 
-	if ((TWSR & 0xF8) != I2C_MT_START_CONDITION_TX)
-	{
+	if((TWSR & 0xF8) != I2C_MT_START_CONDITION_TX){
 		I2C_Error ();
 	}
 }
@@ -24,8 +23,7 @@ void I2C_Repeated_Start(){
 	TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
 	while (!(TWCR & (1 << TWINT)));
 
-	if ((TWSR & 0xF8) != I2C_MT_REPEATED_START_CONDITION_TX)
-	{
+	if((TWSR & 0xF8) != I2C_MT_REPEATED_START_CONDITION_TX){
 		I2C_Error ();
 	}
 }
@@ -39,13 +37,9 @@ void I2C_Write(uint8_t write_data){
 	TWCR = (1 << TWINT) | (1 << TWEN);
 	while (!(TWCR & (1 << TWINT)));
 
-	if ((TWSR & 0xF8) != I2C_MT_SLAVE_WRITE_TX_AND_ACK_RX)
-	{
+	if((TWSR & 0xF8) != I2C_MT_SLAVE_WRITE_TX_AND_ACK_RX){
 		I2C_Error();
-	}
-
-	else if ((TWSR & 0xF8) != I2C_MT_DATA_BYTE_TX_AND_ACK_RX)
-	{
+	}else if((TWSR & 0xF8) != I2C_MT_DATA_BYTE_TX_AND_ACK_RX){
 		I2C_Error();
 	}
 }

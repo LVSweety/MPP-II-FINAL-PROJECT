@@ -55,7 +55,8 @@ int main(void){
 	sei();
 	
 	_delay_ms(500);
-	USER_Loggin(); //There is a bug with the buffer.
+	//USER_Loggin(); //There is a bug with the buffer.
+	MY_Display_state = CMD_STATUS_CODE_DISPLAY_CLOCK;
 	
 	MY_EXTI_Init();
 	MY_ADC_Init();
@@ -63,7 +64,7 @@ int main(void){
 	MY_TIM0_Init();
 	MY_TIM1_Init();
 	MY_TIM2_Init();
-	//I2C_Init();
+	I2C_Init();
 
 	//BME280_Init(0xEC);
 	
@@ -75,9 +76,9 @@ int main(void){
 	
 	
 	while (1) {
-		
-		
-		if(USART0_Flag == 1){
+		BMP280_Init();
+		_delay_ms(200);
+		/*if(USART0_Flag == 1){
 			UESR_CMD_state = USER_CMD_Switch(USART_Buffer);
 			
 			USART0_Flag = 0;
@@ -119,12 +120,11 @@ int main(void){
 				_delay_ms(500);
 			}
 			MY_Display_state = CMD_STATUS_CODE_DISPLAY_CLOCK;
-		}
+		}*/
     }
 }
 
 void USER_Loggin(){
-
 	while (1){
 		if(loginAttempts < 3 && USART0_Flag == 1){
 			if(strcmp(USART_Buffer, "<PASS>") == 0){ //FIX LATER
@@ -456,14 +456,15 @@ ISR(USART_RX_vect){
 
 ISR (INT0_vect){
 	PORTB ^= (1 << PORTB5);
-	USART_Transmit_String("Saving a lap\n");
 	if (MY_Display_state == CMD_STATUS_CODE_DISPLAY_CHRONOMETER){
+		USART_Transmit_String("Saving a lap\n");
 		if (lapBuffer < LAP_BUFFER_SIZE){
 			TimeMainLap[lapBuffer].miliseconds = TimeMainCronometer.miliseconds;
 			TimeMainLap[lapBuffer].seconds = TimeMainCronometer.seconds;
 			TimeMainLap[lapBuffer].minutes = TimeMainCronometer.minutes;
 			lapBuffer++;
 		}else{
+			USART_Transmit_String("Saving a lap\n");
 			lapBuffer = 0;
 			TimeMainLap[lapBuffer].miliseconds = TimeMainCronometer.miliseconds;
 			TimeMainLap[lapBuffer].seconds = TimeMainCronometer.seconds;
