@@ -9,12 +9,23 @@
 #define BMP280_READ                 0b11101101
 #define BMP280_CONTROL_REG			0xF4
 #define BMP280_CONFIG_REG			0xF5
+#define BMP280_TEMPERATURE_REG		0xFA
+#define BMP280_TEMPERATURE_REG		0xFA
+#define BMP280_PRESSURE_REG			0xF7
+#define BMP280_MOISTURE_REG			0xFD
 
-#define BMP280_COMPENSATION_START_ADDRESS   0x88
-
+#define BMP280_COMPENSATION_START_ADDRESS	0x88
+#define BMP280_COMPENSATION_H1_ADDRESS		0xA1
+#define BMP280_COMPENSATION_H2_H6_ADDRESS   0xE1
 uint32_t readTemp();
 void BME280_Init(uint8_t address);
 void BME280_CompensationData(uint8_t address);
+void bmp280_GetRawTemperature();
+double BMP280_GetTemperature();
+void bmp280_GetRawPressure();
+double BMP280_GetPressure();
+void bmp280_GetRawMoisture();
+double BMP280_GetMoisture();
 
 struct BMP280_Calib_Data{
 	uint16_t dig_T1; // adrese: 0x88 / 0x89
@@ -30,6 +41,12 @@ struct BMP280_Calib_Data{
 	int16_t dig_P8;  // adrese: 0x9C / 0x9D
 	int16_t dig_P9;  // adrese: 0x9E / 0x9F
 	// add for humidity if BME280 is used...
+	uint8_t dig_H1;
+	int16_t dig_H2;
+	uint8_t dig_H3;
+	int16_t dig_H4;
+	int16_t dig_H5;
+	int8_t dig_H6;
 }Compensation_Data;
 
 struct BME280_TemperatureData{

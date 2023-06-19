@@ -13,7 +13,6 @@
 
 //#include "atmega328p_CONFIG.h"
 
-//
 #include "variables.h"
 
 #include "clock.h"

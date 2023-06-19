@@ -23,7 +23,7 @@ uint8_t BCD [10] = {D0, D1, D2, D3, D4, D5, D6, D7, D8, D9};
 char USART_Buffer[USART_BUFFER_SIZE];
 uint8_t USART0_Flag = 0;
 uint8_t lapBuffer = 0;
-CMD_StatusCode_t UESR_CMD_state, MY_Display_state = CMD_STATUS_CODE_DISPLAY_NONE;
+CMD_StatusCode_t USER_CMD_state, MY_Display_state = CMD_STATUS_CODE_DISPLAY_NONE;
 uint8_t myChar = 0;
 
 uint8_t loginAttempts = 0;
@@ -46,6 +46,7 @@ void USER_SetCountdown(uint8_t hours,uint8_t minutes, uint8_t seconds, uint8_t m
 
 void USER_Loggin();
 
+//CMD_StatusCode_t MY_GUI_CMD_Check(Flags *pSystemFlags, char *pCMD_ReadBuffer);
 CMD_StatusCode_t USER_CMD_Switch(char *pBufferCMD);
 	
 int main(void){
@@ -74,11 +75,15 @@ int main(void){
 	TimeMainAlaram.seconds = 30;
 	BinaryCodedDecimal(&TimeMainAlaram, myDisplayAlarm, BCD);
 	
+	//BMP280_Init();
+	
 	
 	while (1) {
-		BMP280_Init();
-		_delay_ms(200);
-		/*if(USART0_Flag == 1){
+		//BMP280_GetTemperature();
+		//BMP280_GetPressure();
+		//BMP280_GetHumidity();
+		//_delay_ms(1000);
+		if(USART0_Flag == 1){
 			UESR_CMD_state = USER_CMD_Switch(USART_Buffer);
 			
 			USART0_Flag = 0;
@@ -120,7 +125,7 @@ int main(void){
 				_delay_ms(500);
 			}
 			MY_Display_state = CMD_STATUS_CODE_DISPLAY_CLOCK;
-		}*/
+		}
     }
 }
 
@@ -339,28 +344,22 @@ CMD_StatusCode_t USER_CMD_Switch(char *pBufferCMD){
 			}
 
 		break;
-		
+		/*OLED Display*/
 		case '5':
-			//return MY_GUI_CMDCheck(&systemFlags, pBufferCMD);
+			return MY_GUI_CMDCheck(&systemFlags, pBufferCMD);
 		break;
 		USART_Transmit_String("Failed to resolve command\n");
 	return CMD_STATUS_CODE_ERROR;
 	}
 }
 
-USER_System_EVENT USER_ReadSystemEvent(){
-	if(systemFlags.inputEvent == BOOL_TRUE){
-		if(systemFlags.CMD_DOWN = BOOL_TRUE){
-		 	USER_Sellector++;
-			systemFlags.CMD_DOWN = BOOL_FALSE;
-			systemFlags.inputEvent = BOOL_FALSE;
-			return DISPLAY_EVENT_SELLECTION_DOWN;
-		}
+//USER_System_EVENT USER_ReadSystemEvent(){
+	//if(systemFlags.inputEvent == BOOL_TRUE){
 		//if(systemFlags.CMD_DOWN = BOOL_TRUE){
-		//	USER_Sellector+;
-		//	systemFlags.CMD_DOWN = BOOL_FALSE
-		//	systemFlags.inputEvent = BOOL_FALSE
-		//	return DISPLAY_EVENT_SELLECTION_DOWN
+		 	//USER_Sellector++;
+			//systemFlags.CMD_DOWN = BOOL_FALSE;
+			//systemFlags.inputEvent = BOOL_FALSE;
+			//return DISPLAY_EVENT_SELLECTION_DOWN;
 		//}
 		//if(systemFlags.CMD_DOWN = BOOL_TRUE){
 		//	USER_Sellector+;
@@ -374,9 +373,15 @@ USER_System_EVENT USER_ReadSystemEvent(){
 		//	systemFlags.inputEvent = BOOL_FALSE
 		//	return DISPLAY_EVENT_SELLECTION_DOWN
 		//}
-	}
-	return DISPLAY_EVENT_SELLECTION_NONE;
-}
+		//if(systemFlags.CMD_DOWN = BOOL_TRUE){
+		//	USER_Sellector+;
+		//	systemFlags.CMD_DOWN = BOOL_FALSE
+		//	systemFlags.inputEvent = BOOL_FALSE
+		//	return DISPLAY_EVENT_SELLECTION_DOWN
+		//}
+	//}
+	//return DISPLAY_EVENT_SELLECTION_NONE;
+//}
 
 void MY_BufferClear(){
 	

@@ -43,8 +43,8 @@ typedef enum{
 	CMD_STATUS_CODE_OLED_GUI_ENTER
 }CMD_StatusCode_t;
 
-#define  BOOL_FALSE 0x00
-#define  BOOL_TRUE  0x01
+#define  FALSE 0
+#define  TRUE  1
 
 typedef enum{
 	DRAW_MENU_ROOT = 0,
@@ -72,10 +72,10 @@ typedef enum{
 }GUI_DRAW_ARROW;
 
 typedef struct{
-		uint8_t CMD_UP : 1;
-		uint8_t CMD_DOWN : 1;
-		uint8_t CMD_ENTER : 1;
-		uint8_t inputEvent : 1;
+		uint8_t GUI_CMD_UP : 1;
+		uint8_t GUI_CMD_DOWN : 1;
+		uint8_t GUI_CMD_ENTER : 1;
+		uint8_t GUI_InputEvent : 1;
 }Flags;
 
 #endif

@@ -1,11 +1,3 @@
-/*
- * cmd.h
- *
- * Created: 13/04/2023 11:36:39
- *  Author: Sweets
- */ 
-
-
 #ifndef CMD
 #define CMD
 
