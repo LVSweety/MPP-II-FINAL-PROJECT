@@ -10,6 +10,12 @@ typedef struct{
 	int8_t hours;
 }Time_t;
 
+typedef struct{
+	int32_t T;
+	uint32_t P;
+	uint32_t H;
+}Enviroment_t;
+
 typedef enum{
 	CMD_STATUS_CODE_ERROR = 0,
 	CMD_STATUS_CODE_BUFFER_CLEAR,
@@ -50,7 +56,7 @@ typedef enum{
 	DRAW_MENU_ROOT = 0,
 	DRAW_MENU_MICROCLIMATE,
 	DRAW_MENU_SYSTEM_SETTINGS,
-	DRAW_MENU_MICROCLIMATE_SHOW_ALL
+	DRAW_MENU_QUOTE
 }GUI_DRAW_MENU;
 
 typedef enum{
@@ -76,6 +82,7 @@ typedef struct{
 		uint8_t GUI_CMD_DOWN : 1;
 		uint8_t GUI_CMD_ENTER : 1;
 		uint8_t GUI_InputEvent : 1;
+		uint8_t GUI_OutputData : 1;
 }Flags;
 
 #endif

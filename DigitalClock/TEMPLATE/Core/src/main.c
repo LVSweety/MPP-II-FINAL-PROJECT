@@ -4,6 +4,8 @@
 //PRIVATE DEFINE		>
 
 //VARIABLES				>
+Enviroment_t BME280Env;
+
 Time_t TimeMainClock;
 Time_t TimeMainCountdown;
 Time_t TimeMainCronometer;
@@ -34,6 +36,10 @@ Flags systemFlags;
 uint16_t ADCreadout = 0;
 uint16_t activeResistance = 0;
 double temperature = 0;
+
+//OLED GUI
+GUI_DRAW_MENU	MY_MENU_state = DRAW_MENU_ROOT;
+GUI_DRAW_ARROW	MY_MENU_ARROW_state = MENU_LIST_LENGTH_02;
 //FUNCION PROTOTYPES	>
 void USER_Clock(Time_t *pTime, uint8_t *pClockArr, uint8_t *pBCD);
 void USER_Chronometer(Time_t *pTime, uint8_t *pClockArr, uint8_t *pBCD);
@@ -75,16 +81,19 @@ int main(void){
 	TimeMainAlaram.seconds = 30;
 	BinaryCodedDecimal(&TimeMainAlaram, myDisplayAlarm, BCD);
 	
-	//BMP280_Init();
+	BMP280_Init();
 	
+	SSD1306_Init();
+	SSD1306_ClearScreen();
+	GUI_DrawMenu(MY_MENU_state, &systemFlags);
+	GUI_DrawArrow(MY_MENU_ARROW_state);
 	
 	while (1) {
-		//BMP280_GetTemperature();
-		//BMP280_GetPressure();
-		//BMP280_GetHumidity();
-		//_delay_ms(1000);
 		if(USART0_Flag == 1){
-			UESR_CMD_state = USER_CMD_Switch(USART_Buffer);
+			USER_CMD_state = USER_CMD_Switch(USART_Buffer);
+			FSM_GUI_State(&systemFlags, &MY_MENU_state, &MY_MENU_ARROW_state);
+			GUI_DrawSysTime(TimeMainClock);
+			GUI_DrawArrow(MY_MENU_ARROW_state);
 			
 			USART0_Flag = 0;
 		}
@@ -425,6 +434,19 @@ ISR(TIMER0_COMPA_vect){
 
 ISR(TIMER1_COMPA_vect){
 	USER_Clock(&TimeMainClock, myDisplayClock, BCD);
+	GUI_DrawSysTime(TimeMainClock);
+	
+	if(MY_MENU_state == DRAW_MENU_MICROCLIMATE || systemFlags.GUI_OutputData == TRUE){
+		BME280Env.T = BMP280_GetTemperature();
+		BME280Env.P = BMP280_GetPressure();
+		BME280Env.H = BMP280_GetHumidity();
+		if(systemFlags.GUI_OutputData == TRUE){
+			GUI_DrawEnvOutput(BME280Env, TimeMainClock);
+		}
+		if(MY_MENU_state == DRAW_MENU_MICROCLIMATE){
+			GUI_DrawEnv(BME280Env);
+		}
+	}
 }
 
 ISR(TIMER2_COMPA_vect){

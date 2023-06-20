@@ -23,8 +23,10 @@ Core/src/main.d Core/src/main.o: ../Core/src/main.c ../Core/inc/main.h \
  ../Core/inc/variables.h ../Aplication/GUI/segmentDisplay.h \
  ../Aplication/Cronometer/chronometer.h \
  ../Aplication/Countdown/countdown.h ../Aplication/CMD/cmd.h \
+ ../Aplication/GUI/GUI.h ../Modules/OLED/inc/ssd1306.h \
+ ../Modules/OLED/inc/drawFunctions.h ../Modules/OLED/inc/ssd1306.h \
  ../Modules/BME280/BME280.h ../Atmega328P_Driver/inc/atmega328p_I2C.h \
- ../Modules/OLED/inc/ssd1306.h ../Atmega328P_Driver/inc/atmega328p_GPIO.h \
+ ../Atmega328P_Driver/inc/atmega328p_GPIO.h \
  ../Atmega328P_Driver/inc/atmega328p_TIM.h \
  ../Atmega328P_Driver/inc/atmega328p_USART.h \
  ../Atmega328P_Driver/inc/atmega328p_ADC.h
@@ -85,11 +87,17 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../Aplication/CMD/cmd.h:
 
+../Aplication/GUI/GUI.h:
+
+../Modules/OLED/inc/ssd1306.h:
+
+../Modules/OLED/inc/drawFunctions.h:
+
+../Modules/OLED/inc/ssd1306.h:
+
 ../Modules/BME280/BME280.h:
 
 ../Atmega328P_Driver/inc/atmega328p_I2C.h:
-
-../Modules/OLED/inc/ssd1306.h:
 
 ../Atmega328P_Driver/inc/atmega328p_GPIO.h:
 

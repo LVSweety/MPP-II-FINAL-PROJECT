@@ -2,7 +2,7 @@
 
 void MY_GUI_DrawSymbol(uint8_t px, uint8_t py, uint8_t pSymbol){
 	SSD1306_SetPosition(px, py);
-	SSD1306_DrawString(pSymbol);
+	SSD1306_DrawChar(pSymbol);
 }
 
 void MY_GUI_DrawString(uint8_t px, uint8_t py, uint8_t *pSymbol){

@@ -1,9 +1,3 @@
-/*
- * cmd.c
- *
- * Created: 13/04/2023 11:36:28
- *  Author: Sweets
- */ 
 #include "cmd.h"
 
 CMD_StatusCode_t MY_GUI_CMDCheck(Flags *pSystemFlags, char *pCMD_ReadBuffer){

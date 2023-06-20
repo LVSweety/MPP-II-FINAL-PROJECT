@@ -21,11 +21,11 @@ uint32_t readTemp();
 void BME280_Init(uint8_t address);
 void BME280_CompensationData(uint8_t address);
 void bmp280_GetRawTemperature();
-double BMP280_GetTemperature();
+int32_t BMP280_GetTemperature();
 void bmp280_GetRawPressure();
-double BMP280_GetPressure();
+uint32_t BMP280_GetPressure();
 void bmp280_GetRawMoisture();
-double BMP280_GetMoisture();
+uint32_t BMP280_GetMoisture();
 
 struct BMP280_Calib_Data{
 	uint16_t dig_T1; // adrese: 0x88 / 0x89

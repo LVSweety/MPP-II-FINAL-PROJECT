@@ -20,6 +20,7 @@
 #include "chronometer.h"
 #include "countdown.h"
 #include "cmd.h"
+#include "GUI.h"
 
 #include "BME280.h"
 #include "ssd1306.h"
