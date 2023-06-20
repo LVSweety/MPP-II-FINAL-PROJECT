@@ -40,6 +40,9 @@ double temperature = 0;
 //OLED GUI
 GUI_DRAW_MENU	MY_MENU_state = DRAW_MENU_ROOT;
 GUI_DRAW_ARROW	MY_MENU_ARROW_state = MENU_LIST_LENGTH_02;
+
+uint16_t ADCController = 0;
+
 //FUNCION PROTOTYPES	>
 void USER_Clock(Time_t *pTime, uint8_t *pClockArr, uint8_t *pBCD);
 void USER_Chronometer(Time_t *pTime, uint8_t *pClockArr, uint8_t *pBCD);
@@ -97,6 +100,22 @@ int main(void){
 			
 			USART0_Flag = 0;
 		}
+		
+		/*if(systemFlags.GUI_InputEvent == FALSE){
+			ADCController = Analog_Read(ADC_CHANNEL_3);
+			if(ADCController > 900 || ADCController < 200){
+				if(ADCController >= 455){
+					systemFlags.GUI_CMD_DOWN = TRUE;
+					systemFlags.GUI_InputEvent = TRUE;
+					}else{
+					systemFlags.GUI_CMD_UP = TRUE;
+					systemFlags.GUI_InputEvent = TRUE;
+				}
+				FSM_GUI_State(&systemFlags, &MY_MENU_state, &MY_MENU_ARROW_state);
+				GUI_DrawSysTime(TimeMainClock);
+				GUI_DrawArrow(MY_MENU_ARROW_state);
+			}
+		}*/
 		
 		if(MY_Display_state == CMD_STATUS_CODE_DISPLAY_TEMPERATURE){
 			ADCreadout = Analog_Read(ADC_CHANNEL_2);
@@ -200,7 +219,7 @@ void USER_SetCountdown(uint8_t hours,uint8_t minutes, uint8_t seconds, uint8_t m
 CMD_StatusCode_t USER_CMD_Switch(char *pBufferCMD){
 	switch(pBufferCMD[1]){
 		/* System Configuration */
-		case '0':
+		case '0': // <0commanda>
 			if(strcmp(pBufferCMD, "<00>") == 0){
 				//MY_BufferClear(USART_Buffer, USART_BUFFER_SIZE);
 				//MY_BufferClear(CMD_Buffer, CMD_BUFFER_SIZE);
@@ -356,6 +375,13 @@ CMD_StatusCode_t USER_CMD_Switch(char *pBufferCMD){
 		/*OLED Display*/
 		case '5':
 			return MY_GUI_CMDCheck(&systemFlags, pBufferCMD);
+		break;
+		case 'M':
+			if(strcmp(pBufferCMD, "<MYACPCH2>") == 0){
+				GUI_DrawVoltageOutput(Analog_Read(ADC_CHANNEL_2), TimeMainClock, '2');
+			}else if(strcmp(pBufferCMD, "<MYACPCH3>") == 0){
+				GUI_DrawVoltageOutput(Analog_Read(ADC_CHANNEL_3), TimeMainClock, '3');
+			}
 		break;
 		USART_Transmit_String("Failed to resolve command\n");
 	return CMD_STATUS_CODE_ERROR;

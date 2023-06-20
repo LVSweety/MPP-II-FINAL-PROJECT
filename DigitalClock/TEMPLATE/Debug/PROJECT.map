@@ -58,6 +58,8 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               Aplication/CMD/cmd.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
                               Aplication/GUI/GUI.o (__do_clear_bss)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                              Aplication/GUI/GUI.o (__umulhisi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
                               Modules/BME280/BME280.o (__muluhisi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
@@ -88,8 +90,6 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               Modules/BME280/BME280.o (__subdi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_cmpdi2_s8.o)
                               Modules/BME280/BME280.o (__cmpdi2_s8)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o) (__umulhisi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcmp.o)
                               Aplication/CMD/cmd.o (strcmp)
 
@@ -168,6 +168,8 @@ Discarded input sections
  .text.USER_Loggin
                 0x00000000       0x42 Core/src/main.o
  .text.MY_BufferClear
+                0x00000000        0x2 Core/src/main.o
+ .bss.ADCController
                 0x00000000        0x2 Core/src/main.o
  .bss.USER_Sellector
                 0x00000000        0x1 Core/src/main.o
@@ -409,6 +411,20 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
@@ -623,20 +639,6 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_cmpdi2_s8.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_cmpdi2_s8.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
- .text.libgcc.div
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
- .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
- .text.libgcc.prologue
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
- .text.libgcc.builtins
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
- .text.libgcc.fmul
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
- .text.libgcc.fixed
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcmp.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcmp.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcmp.o)
@@ -784,7 +786,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3424
+.text           0x00000000     0x3628
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -793,54 +795,56 @@ END GROUP
  *(.progmem.gcc*)
  .progmem.gcc_sw_table.GUI_DrawArrow
                 0x00000068       0x10 Aplication/GUI/GUI.o
+ .progmem.gcc_sw_table.USER_CMD_Switch
+                0x00000078       0x3c Core/src/main.o
  .progmem.gcc_sw_table.__vector_14
-                0x00000078        0xe Core/src/main.o
+                0x000000b4        0xe Core/src/main.o
  .progmem.gcc_fplib
-                0x00000086       0x5a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(log.o)
-                0x000000e0                . = ALIGN (0x2)
-                0x000000e0                __trampolines_start = .
+                0x000000c2       0x5a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(log.o)
+                0x0000011c                . = ALIGN (0x2)
+                0x0000011c                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x000000e0        0x0 linker stubs
+ .trampolines   0x0000011c        0x0 linker stubs
  *(.trampolines*)
-                0x000000e0                __trampolines_end = .
+                0x0000011c                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
  .progmem.data.FONTS
-                0x000000e0      0x1e0 Modules/OLED/src/font.o
-                0x000000e0                FONTS
+                0x0000011c      0x1e0 Modules/OLED/src/font.o
+                0x0000011c                FONTS
  .progmem.data.INIT_SSD1306
-                0x000002c0       0x32 Modules/OLED/src/ssd1306.o
-                0x000002c0                INIT_SSD1306
-                0x000002f2                . = ALIGN (0x2)
+                0x000002fc       0x32 Modules/OLED/src/ssd1306.o
+                0x000002fc                INIT_SSD1306
+                0x0000032e                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x000002f2                __ctors_start = .
+                0x0000032e                __ctors_start = .
  *(.ctors)
-                0x000002f2                __ctors_end = .
-                0x000002f2                __dtors_start = .
+                0x0000032e                __ctors_end = .
+                0x0000032e                __dtors_start = .
  *(.dtors)
-                0x000002f2                __dtors_end = .
+                0x0000032e                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000002f2        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x000002f2                __init
+ .init0         0x0000032e        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x0000032e                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000002f2        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init2         0x0000032e        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000002fe       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                0x000002fe                __do_copy_data
- .init4         0x00000314       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
-                0x00000314                __do_clear_bss
+ .init4         0x0000033a       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x0000033a                __do_copy_data
+ .init4         0x00000350       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000350                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -851,373 +855,376 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000324        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init9         0x00000360        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x0000032c        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x0000032c                __vector_22
-                0x0000032c                __vector_24
-                0x0000032c                __vector_12
-                0x0000032c                __bad_interrupt
-                0x0000032c                __vector_6
-                0x0000032c                __vector_3
-                0x0000032c                __vector_23
-                0x0000032c                __vector_25
-                0x0000032c                __vector_13
-                0x0000032c                __vector_17
-                0x0000032c                __vector_19
-                0x0000032c                __vector_5
-                0x0000032c                __vector_4
-                0x0000032c                __vector_9
-                0x0000032c                __vector_2
-                0x0000032c                __vector_21
-                0x0000032c                __vector_15
-                0x0000032c                __vector_8
-                0x0000032c                __vector_10
-                0x0000032c                __vector_16
-                0x0000032c                __vector_20
-                0x00000330                . = ALIGN (0x2)
+ .text          0x00000368        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x00000368                __vector_22
+                0x00000368                __vector_24
+                0x00000368                __vector_12
+                0x00000368                __bad_interrupt
+                0x00000368                __vector_6
+                0x00000368                __vector_3
+                0x00000368                __vector_23
+                0x00000368                __vector_25
+                0x00000368                __vector_13
+                0x00000368                __vector_17
+                0x00000368                __vector_19
+                0x00000368                __vector_5
+                0x00000368                __vector_4
+                0x00000368                __vector_9
+                0x00000368                __vector_2
+                0x00000368                __vector_21
+                0x00000368                __vector_15
+                0x00000368                __vector_8
+                0x00000368                __vector_10
+                0x00000368                __vector_16
+                0x00000368                __vector_20
+                0x0000036c                . = ALIGN (0x2)
  *(.text.*)
  .text.TimeClock
-                0x00000330       0x2c Aplication/Clock/clock.o
-                0x00000330                TimeClock
+                0x0000036c       0x2c Aplication/Clock/clock.o
+                0x0000036c                TimeClock
  .text.MY_GUI_CMDCheck
-                0x0000035c       0x72 Aplication/CMD/cmd.o
-                0x0000035c                MY_GUI_CMDCheck
+                0x00000398       0x72 Aplication/CMD/cmd.o
+                0x00000398                MY_GUI_CMDCheck
  .text.TimeCountdown
-                0x000003ce       0x46 Aplication/Countdown/countdown.o
-                0x000003ce                TimeCountdown
+                0x0000040a       0x46 Aplication/Countdown/countdown.o
+                0x0000040a                TimeCountdown
  .text.TimeChronometer
-                0x00000414       0x3a Aplication/Cronometer/chronometer.o
-                0x00000414                TimeChronometer
+                0x00000450       0x3a Aplication/Cronometer/chronometer.o
+                0x00000450                TimeChronometer
  .text.GUI_DrawMenu
-                0x0000044e       0xc8 Aplication/GUI/GUI.o
-                0x0000044e                GUI_DrawMenu
+                0x0000048a       0xc8 Aplication/GUI/GUI.o
+                0x0000048a                GUI_DrawMenu
  .text.FSM_GUI_State
-                0x00000516      0x142 Aplication/GUI/GUI.o
-                0x00000516                FSM_GUI_State
+                0x00000552      0x142 Aplication/GUI/GUI.o
+                0x00000552                FSM_GUI_State
  .text.GUI_DrawArrow
-                0x00000658       0xa8 Aplication/GUI/GUI.o
-                0x00000658                GUI_DrawArrow
+                0x00000694       0xa8 Aplication/GUI/GUI.o
+                0x00000694                GUI_DrawArrow
  .text.GUI_DrawSysTime
-                0x00000700       0x82 Aplication/GUI/GUI.o
-                0x00000700                GUI_DrawSysTime
+                0x0000073c       0x82 Aplication/GUI/GUI.o
+                0x0000073c                GUI_DrawSysTime
  .text.GUI_DrawEnv
-                0x00000782      0x178 Aplication/GUI/GUI.o
-                0x00000782                GUI_DrawEnv
+                0x000007be      0x178 Aplication/GUI/GUI.o
+                0x000007be                GUI_DrawEnv
  .text.GUI_DrawEnvOutput
-                0x000008fa      0x1e6 Aplication/GUI/GUI.o
-                0x000008fa                GUI_DrawEnvOutput
+                0x00000936      0x1e6 Aplication/GUI/GUI.o
+                0x00000936                GUI_DrawEnvOutput
+ .text.GUI_DrawVoltageOutput
+                0x00000b1c      0x18c Aplication/GUI/GUI.o
+                0x00000b1c                GUI_DrawVoltageOutput
  .text.BinaryCodedDecimal
-                0x00000ae0      0x146 Aplication/GUI/segmentDisplay.o
-                0x00000ae0                BinaryCodedDecimal
+                0x00000ca8      0x146 Aplication/GUI/segmentDisplay.o
+                0x00000ca8                BinaryCodedDecimal
  .text.ShiftRegister
-                0x00000c26       0x88 Aplication/GUI/segmentDisplay.o
-                0x00000c26                ShiftRegister
+                0x00000dee       0x88 Aplication/GUI/segmentDisplay.o
+                0x00000dee                ShiftRegister
  .text.MY_ADC_Init
-                0x00000cae       0x12 Atmega328P_Driver/src/atmega328p_ADC.o
-                0x00000cae                MY_ADC_Init
+                0x00000e76       0x12 Atmega328P_Driver/src/atmega328p_ADC.o
+                0x00000e76                MY_ADC_Init
  .text.Analog_Read
-                0x00000cc0       0x28 Atmega328P_Driver/src/atmega328p_ADC.o
-                0x00000cc0                Analog_Read
+                0x00000e88       0x28 Atmega328P_Driver/src/atmega328p_ADC.o
+                0x00000e88                Analog_Read
  .text.MY_EXTI_Init
-                0x00000ce8        0xc Atmega328P_Driver/src/atmega328p_EXTI.o
-                0x00000ce8                MY_EXTI_Init
+                0x00000eb0        0xc Atmega328P_Driver/src/atmega328p_EXTI.o
+                0x00000eb0                MY_EXTI_Init
  .text.MY_GPIO_Init
-                0x00000cf4       0x16 Atmega328P_Driver/src/atmega328p_GPIO.o
-                0x00000cf4                MY_GPIO_Init
+                0x00000ebc       0x16 Atmega328P_Driver/src/atmega328p_GPIO.o
+                0x00000ebc                MY_GPIO_Init
  .text.I2C_Init
-                0x00000d0a       0x1c Atmega328P_Driver/src/atmega328p_I2C.o
-                0x00000d0a                I2C_Init
+                0x00000ed2       0x1c Atmega328P_Driver/src/atmega328p_I2C.o
+                0x00000ed2                I2C_Init
  .text.I2C_Start
-                0x00000d26       0x14 Atmega328P_Driver/src/atmega328p_I2C.o
-                0x00000d26                I2C_Start
+                0x00000eee       0x14 Atmega328P_Driver/src/atmega328p_I2C.o
+                0x00000eee                I2C_Start
  .text.I2C_Repeated_Start
-                0x00000d3a       0x14 Atmega328P_Driver/src/atmega328p_I2C.o
-                0x00000d3a                I2C_Repeated_Start
+                0x00000f02       0x14 Atmega328P_Driver/src/atmega328p_I2C.o
+                0x00000f02                I2C_Repeated_Start
  .text.I2C_Stop
-                0x00000d4e        0x8 Atmega328P_Driver/src/atmega328p_I2C.o
-                0x00000d4e                I2C_Stop
+                0x00000f16        0x8 Atmega328P_Driver/src/atmega328p_I2C.o
+                0x00000f16                I2C_Stop
  .text.I2C_Write
-                0x00000d56       0x22 Atmega328P_Driver/src/atmega328p_I2C.o
-                0x00000d56                I2C_Write
+                0x00000f1e       0x22 Atmega328P_Driver/src/atmega328p_I2C.o
+                0x00000f1e                I2C_Write
  .text.I2C_Read
-                0x00000d78       0x1c Atmega328P_Driver/src/atmega328p_I2C.o
-                0x00000d78                I2C_Read
+                0x00000f40       0x1c Atmega328P_Driver/src/atmega328p_I2C.o
+                0x00000f40                I2C_Read
  .text.MY_TIMX_Start
-                0x00000d94       0x3e Atmega328P_Driver/src/atmega328p_TIM.o
-                0x00000d94                MY_TIMX_Start
+                0x00000f5c       0x3e Atmega328P_Driver/src/atmega328p_TIM.o
+                0x00000f5c                MY_TIMX_Start
  .text.MY_TIM0_Init
-                0x00000dd2       0x20 Atmega328P_Driver/src/atmega328p_TIM.o
-                0x00000dd2                MY_TIM0_Init
+                0x00000f9a       0x20 Atmega328P_Driver/src/atmega328p_TIM.o
+                0x00000f9a                MY_TIM0_Init
  .text.MY_TIM1_Init
-                0x00000df2       0x32 Atmega328P_Driver/src/atmega328p_TIM.o
-                0x00000df2                MY_TIM1_Init
+                0x00000fba       0x32 Atmega328P_Driver/src/atmega328p_TIM.o
+                0x00000fba                MY_TIM1_Init
  .text.MY_TIM2_Init
-                0x00000e24       0x28 Atmega328P_Driver/src/atmega328p_TIM.o
-                0x00000e24                MY_TIM2_Init
+                0x00000fec       0x28 Atmega328P_Driver/src/atmega328p_TIM.o
+                0x00000fec                MY_TIM2_Init
  .text.MY_TIMX_Stop
-                0x00000e4c       0x2c Atmega328P_Driver/src/atmega328p_TIM.o
-                0x00000e4c                MY_TIMX_Stop
+                0x00001014       0x2c Atmega328P_Driver/src/atmega328p_TIM.o
+                0x00001014                MY_TIMX_Stop
  .text.MY_USART_Init
-                0x00000e78       0x1a Atmega328P_Driver/src/atmega328p_USART.o
-                0x00000e78                MY_USART_Init
+                0x00001040       0x1a Atmega328P_Driver/src/atmega328p_USART.o
+                0x00001040                MY_USART_Init
  .text.USART_Transmit_String
-                0x00000e92       0x22 Atmega328P_Driver/src/atmega328p_USART.o
-                0x00000e92                USART_Transmit_String
+                0x0000105a       0x22 Atmega328P_Driver/src/atmega328p_USART.o
+                0x0000105a                USART_Transmit_String
  .text.USER_Clock
-                0x00000eb4       0x2e Core/src/main.o
-                0x00000eb4                USER_Clock
+                0x0000107c       0x2e Core/src/main.o
+                0x0000107c                USER_Clock
  .text.USER_Chronometer
-                0x00000ee2       0x2e Core/src/main.o
-                0x00000ee2                USER_Chronometer
+                0x000010aa       0x2e Core/src/main.o
+                0x000010aa                USER_Chronometer
  .text.USER_Countdown
-                0x00000f10       0x2e Core/src/main.o
-                0x00000f10                USER_Countdown
+                0x000010d8       0x2e Core/src/main.o
+                0x000010d8                USER_Countdown
  .text.USER_SetClock
-                0x00000f3e        0xe Core/src/main.o
-                0x00000f3e                USER_SetClock
+                0x00001106        0xe Core/src/main.o
+                0x00001106                USER_SetClock
  .text.USER_SetAlarm
-                0x00000f4c        0xe Core/src/main.o
-                0x00000f4c                USER_SetAlarm
+                0x00001114        0xe Core/src/main.o
+                0x00001114                USER_SetAlarm
  .text.USER_SetChronometer
-                0x00000f5a        0xe Core/src/main.o
-                0x00000f5a                USER_SetChronometer
+                0x00001122        0xe Core/src/main.o
+                0x00001122                USER_SetChronometer
  .text.USER_SetCountdown
-                0x00000f68        0xe Core/src/main.o
-                0x00000f68                USER_SetCountdown
+                0x00001130        0xe Core/src/main.o
+                0x00001130                USER_SetCountdown
  .text.USER_CMD_Switch
-                0x00000f76      0x412 Core/src/main.o
-                0x00000f76                USER_CMD_Switch
- .text.main     0x00001388      0x338 Core/src/main.o
-                0x00001388                main
+                0x0000113e      0x44e Core/src/main.o
+                0x0000113e                USER_CMD_Switch
+ .text.main     0x0000158c      0x338 Core/src/main.o
+                0x0000158c                main
  .text.__vector_14
-                0x000016c0       0xc4 Core/src/main.o
-                0x000016c0                __vector_14
+                0x000018c4       0xc4 Core/src/main.o
+                0x000018c4                __vector_14
  .text.__vector_11
-                0x00001784      0x158 Core/src/main.o
-                0x00001784                __vector_11
+                0x00001988      0x158 Core/src/main.o
+                0x00001988                __vector_11
  .text.__vector_7
-                0x000018dc       0x74 Core/src/main.o
-                0x000018dc                __vector_7
+                0x00001ae0       0x74 Core/src/main.o
+                0x00001ae0                __vector_7
  .text.__vector_18
-                0x00001950       0x86 Core/src/main.o
-                0x00001950                __vector_18
+                0x00001b54       0x86 Core/src/main.o
+                0x00001b54                __vector_18
  .text.__vector_1
-                0x000019d6       0xba Core/src/main.o
-                0x000019d6                __vector_1
+                0x00001bda       0xba Core/src/main.o
+                0x00001bda                __vector_1
  .text.BMP280_Compensation_Data
-                0x00001a90      0x29e Modules/BME280/BME280.o
-                0x00001a90                BMP280_Compensation_Data
+                0x00001c94      0x29e Modules/BME280/BME280.o
+                0x00001c94                BMP280_Compensation_Data
  .text.BMP280_Init
-                0x00001d2e       0x2c Modules/BME280/BME280.o
-                0x00001d2e                BMP280_Init
+                0x00001f32       0x2c Modules/BME280/BME280.o
+                0x00001f32                BMP280_Init
  .text.bmp280_GetRawTemperature
-                0x00001d5a       0xa4 Modules/BME280/BME280.o
-                0x00001d5a                bmp280_GetRawTemperature
+                0x00001f5e       0xa4 Modules/BME280/BME280.o
+                0x00001f5e                bmp280_GetRawTemperature
  .text.BMP280_GetTemperature
-                0x00001dfe      0x140 Modules/BME280/BME280.o
-                0x00001dfe                BMP280_GetTemperature
+                0x00002002      0x140 Modules/BME280/BME280.o
+                0x00002002                BMP280_GetTemperature
  .text.bmp280_GetRawPressure
-                0x00001f3e       0xa4 Modules/BME280/BME280.o
-                0x00001f3e                bmp280_GetRawPressure
+                0x00002142       0xa4 Modules/BME280/BME280.o
+                0x00002142                bmp280_GetRawPressure
  .text.BMP280_GetPressure
-                0x00001fe2      0x4c2 Modules/BME280/BME280.o
-                0x00001fe2                BMP280_GetPressure
+                0x000021e6      0x4c2 Modules/BME280/BME280.o
+                0x000021e6                BMP280_GetPressure
  .text.bmp280_GetRawHumidity
-                0x000024a4       0x94 Modules/BME280/BME280.o
-                0x000024a4                bmp280_GetRawHumidity
+                0x000026a8       0x94 Modules/BME280/BME280.o
+                0x000026a8                bmp280_GetRawHumidity
  .text.BMP280_GetHumidity
-                0x00002538      0x1fe Modules/BME280/BME280.o
-                0x00002538                BMP280_GetHumidity
+                0x0000273c      0x1fe Modules/BME280/BME280.o
+                0x0000273c                BMP280_GetHumidity
  .text.MY_GUI_DrawString
-                0x00002736       0x16 Modules/OLED/src/drawFunctions.o
-                0x00002736                MY_GUI_DrawString
+                0x0000293a       0x16 Modules/OLED/src/drawFunctions.o
+                0x0000293a                MY_GUI_DrawString
  .text.SSD1306_Send_StartAndSLAW
-                0x0000274c       0x10 Modules/OLED/src/ssd1306.o
-                0x0000274c                SSD1306_Send_StartAndSLAW
+                0x00002950       0x10 Modules/OLED/src/ssd1306.o
+                0x00002950                SSD1306_Send_StartAndSLAW
  .text.SSD1306_Send_Command
-                0x0000275c       0x18 Modules/OLED/src/ssd1306.o
-                0x0000275c                SSD1306_Send_Command
+                0x00002960       0x18 Modules/OLED/src/ssd1306.o
+                0x00002960                SSD1306_Send_Command
  .text.SSD1306_Init
-                0x00002774       0x84 Modules/OLED/src/ssd1306.o
-                0x00002774                SSD1306_Init
+                0x00002978       0x84 Modules/OLED/src/ssd1306.o
+                0x00002978                SSD1306_Init
  .text.SSD1306_UpdateScreen
-                0x000027f8       0x10 Modules/OLED/src/ssd1306.o
-                0x000027f8                SSD1306_UpdateScreen
+                0x000029fc       0x10 Modules/OLED/src/ssd1306.o
+                0x000029fc                SSD1306_UpdateScreen
  .text.SSD1306_SetPosition
-                0x00002808       0x70 Modules/OLED/src/ssd1306.o
-                0x00002808                SSD1306_SetPosition
+                0x00002a0c       0x70 Modules/OLED/src/ssd1306.o
+                0x00002a0c                SSD1306_SetPosition
  .text.SSD1306_ClearScreen
-                0x00002878       0x4e Modules/OLED/src/ssd1306.o
-                0x00002878                SSD1306_ClearScreen
+                0x00002a7c       0x4e Modules/OLED/src/ssd1306.o
+                0x00002a7c                SSD1306_ClearScreen
  .text.SSD1306_UpdTxtPosition
-                0x000028c6       0x62 Modules/OLED/src/ssd1306.o
-                0x000028c6                SSD1306_UpdTxtPosition
+                0x00002aca       0x62 Modules/OLED/src/ssd1306.o
+                0x00002aca                SSD1306_UpdTxtPosition
  .text.SSD1306_DrawChar
-                0x00002928       0x92 Modules/OLED/src/ssd1306.o
-                0x00002928                SSD1306_DrawChar
+                0x00002b2c       0x92 Modules/OLED/src/ssd1306.o
+                0x00002b2c                SSD1306_DrawChar
  .text.SSD1306_DrawString
-                0x000029ba       0x30 Modules/OLED/src/ssd1306.o
-                0x000029ba                SSD1306_DrawString
+                0x00002bbe       0x30 Modules/OLED/src/ssd1306.o
+                0x00002bbe                SSD1306_DrawString
  .text.TWI_Init
-                0x000029ea       0x18 Modules/OLED/src/twi.o
-                0x000029ea                TWI_Init
+                0x00002bee       0x18 Modules/OLED/src/twi.o
+                0x00002bee                TWI_Init
  .text.TWI_MT_Start
-                0x00002a02       0x3c Modules/OLED/src/twi.o
-                0x00002a02                TWI_MT_Start
+                0x00002c06       0x3c Modules/OLED/src/twi.o
+                0x00002c06                TWI_MT_Start
  .text.TWI_MT_Send_SLAW
-                0x00002a3e       0x2a Modules/OLED/src/twi.o
-                0x00002a3e                TWI_MT_Send_SLAW
+                0x00002c42       0x2a Modules/OLED/src/twi.o
+                0x00002c42                TWI_MT_Send_SLAW
  .text.TWI_MT_Send_Data
-                0x00002a68       0x28 Modules/OLED/src/twi.o
-                0x00002a68                TWI_MT_Send_Data
+                0x00002c6c       0x28 Modules/OLED/src/twi.o
+                0x00002c6c                TWI_MT_Send_Data
  .text.TWI_Stop
-                0x00002a90        0x8 Modules/OLED/src/twi.o
-                0x00002a90                TWI_Stop
+                0x00002c94        0x8 Modules/OLED/src/twi.o
+                0x00002c94                TWI_Stop
  .text.avr-libc.fplib
-                0x00002a98        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                0x00002a98                __subsf3
-                0x00002a9a                __addsf3
+                0x00002c9c        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00002c9c                __subsf3
+                0x00002c9e                __addsf3
  .text.avr-libc.fplib
-                0x00002aa6       0xcc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
-                0x00002ac8                __addsf3x
+                0x00002caa       0xcc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x00002ccc                __addsf3x
  .text.avr-libc.fplib
-                0x00002b72        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                0x00002b72                __divsf3
+                0x00002d76        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00002d76                __divsf3
  .text.avr-libc.fplib
-                0x00002b7a       0xdc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
-                0x00002b9a                __divsf3x
-                0x00002ba0                __divsf3_pse
+                0x00002d7e       0xdc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00002d9e                __divsf3x
+                0x00002da4                __divsf3_pse
  .text.avr-libc.fplib
-                0x00002c56        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
-                0x00002c56                __fixsfsi
+                0x00002e5a        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                0x00002e5a                __fixsfsi
  .text.avr-libc.fplib
-                0x00002c64       0x5e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                0x00002c64                __fixunssfsi
+                0x00002e68       0x5e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x00002e68                __fixunssfsi
  .text.avr-libc.fplib
-                0x00002cc2       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                0x00002cc2                __floatunsisf
-                0x00002cc6                __floatsisf
+                0x00002ec6       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00002ec6                __floatunsisf
+                0x00002eca                __floatsisf
  .text.avr-libc.fplib
-                0x00002d3c        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x00002d3c                __fp_inf
+                0x00002f40        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00002f40                __fp_inf
  .text.avr-libc.fplib
-                0x00002d48        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x00002d48                __fp_nan
+                0x00002f4c        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00002f4c                __fp_nan
  .text.avr-libc.fplib
-                0x00002d4e        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x00002d4e                __fp_pscA
+                0x00002f52        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00002f52                __fp_pscA
  .text.avr-libc.fplib
-                0x00002d5c        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x00002d5c                __fp_pscB
+                0x00002f60        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00002f60                __fp_pscB
  .text.avr-libc.fplib
-                0x00002d6a       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x00002d6a                __fp_round
+                0x00002f6e       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x00002f6e                __fp_round
  .text.avr-libc.fplib
-                0x00002d8c       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x00002d8c                __fp_split3
-                0x00002d9c                __fp_splitA
+                0x00002f90       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00002f90                __fp_split3
+                0x00002fa0                __fp_splitA
  .text.avr-libc.fplib
-                0x00002dd0        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x00002dd0                __fp_zero
-                0x00002dd2                __fp_szero
+                0x00002fd4        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00002fd4                __fp_zero
+                0x00002fd6                __fp_szero
  .text.avr-libc.fplib
-                0x00002dde       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(log.o)
-                0x00002dee                log
+                0x00002fe2       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(log.o)
+                0x00002ff2                log
  .text.avr-libc.fplib
-                0x00002e7e        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                0x00002e7e                __mulsf3
+                0x00003082        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x00003082                __mulsf3
  .text.avr-libc.fplib
-                0x00002e86       0xd2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                0x00002ea4                __mulsf3x
-                0x00002eaa                __mulsf3_pse
+                0x0000308a       0xd2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x000030a8                __mulsf3x
+                0x000030ae                __mulsf3_pse
  .text.avr-libc.fplib
-                0x00002f58       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
-                0x00002f58                __fp_mpack
-                0x00002f5c                __fp_mpack_finite
+                0x0000315c       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+                0x0000315c                __fp_mpack
+                0x00003160                __fp_mpack_finite
  .text.avr-libc.fplib
-                0x00002f74       0x4e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
-                0x00002f74                __fp_powser
+                0x00003178       0x4e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
+                0x00003178                __fp_powser
  .text.libgcc.mul
-                0x00002fc2       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
-                0x00002fc2                __mulsi3
+                0x000031c6       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+                0x000031c6                __mulsi3
  .text.libgcc.div
-                0x00002fe2       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
-                0x00002fe2                __udivmodhi4
+                0x000031e6       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x000031e6                __udivmodhi4
  .text.libgcc.div
-                0x0000300a       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
-                0x0000300a                _div
-                0x0000300a                __divmodhi4
+                0x0000320e       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+                0x0000320e                _div
+                0x0000320e                __divmodhi4
  .text.libgcc.div
-                0x00003032       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
-                0x00003032                __udivmodsi4
+                0x00003236       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x00003236                __udivmodsi4
  .text.libgcc.div
-                0x00003076       0x2e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodsi4.o)
-                0x00003076                __divmodsi4
+                0x0000327a       0x2e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodsi4.o)
+                0x0000327a                __divmodsi4
  .text.libgcc.div
-                0x000030a4       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_negsi2.o)
-                0x000030a4                __negsi2
- .text.libgcc   0x000030b4        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
-                0x000030b4                __tablejump2__
+                0x000032a8       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_negsi2.o)
+                0x000032a8                __negsi2
+ .text.libgcc   0x000032b8        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                0x000032b8                __tablejump2__
  .text.libgcc.mul
-                0x000030c0       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
-                0x000030c0                __muluhisi3
+                0x000032c4       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000032c4                __umulhisi3
  .text.libgcc.mul
-                0x000030d6       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
-                0x000030d6                __mulshisi3
-                0x000030dc                __mulohisi3
+                0x000032e2       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                0x000032e2                __muluhisi3
  .text.libgcc.mul
-                0x000030e6       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muldi3.o)
-                0x000030e6                __muldi3
+                0x000032f8       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
+                0x000032f8                __mulshisi3
+                0x000032fe                __mulohisi3
  .text.libgcc.mul
-                0x00003186       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muldi3_6.o)
-                0x00003186                __muldi3_6
+                0x00003308       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muldi3.o)
+                0x00003308                __muldi3
+ .text.libgcc.mul
+                0x000033a8       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muldi3_6.o)
+                0x000033a8                __muldi3_6
  .text.libgcc.div
-                0x00003198       0x62 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divdi3.o)
-                0x00003198                __moddi3
-                0x0000319c                __divdi3
-                0x0000319e                __divdi3_moddi3
+                0x000033ba       0x62 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divdi3.o)
+                0x000033ba                __moddi3
+                0x000033be                __divdi3
+                0x000033c0                __divdi3_moddi3
  .text.libgcc.div
-                0x000031fa       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivdi3.o)
-                0x000031fa                __umoddi3
-                0x000031fe                __udivdi3
-                0x00003200                __udivdi3_umoddi3
+                0x0000341c       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivdi3.o)
+                0x0000341c                __umoddi3
+                0x00003420                __udivdi3
+                0x00003422                __udivdi3_umoddi3
  .text.libgcc.div
-                0x00003216       0xa2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmod64.o)
-                0x00003216                __udivmod64
- .text.libgcc   0x000032b8       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_negdi2.o)
-                0x000032b8                __negdi2
+                0x00003438       0xa2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmod64.o)
+                0x00003438                __udivmod64
+ .text.libgcc   0x000034da       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_negdi2.o)
+                0x000034da                __negdi2
  .text.libgcc.prologue
-                0x000032d8       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_prologue.o)
-                0x000032d8                __prologue_saves__
+                0x000034fa       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_prologue.o)
+                0x000034fa                __prologue_saves__
  .text.libgcc.prologue
-                0x00003310       0x36 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_epilogue.o)
-                0x00003310                __epilogue_restores__
+                0x00003532       0x36 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_epilogue.o)
+                0x00003532                __epilogue_restores__
  .text.libgcc.builtins
-                0x00003346       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_ashldi3.o)
-                0x00003346                __ashldi3
+                0x00003568       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_ashldi3.o)
+                0x00003568                __ashldi3
  .text.libgcc.builtins
-                0x00003378       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_ashrdi3.o)
-                0x00003378                __ashrdi3
-                0x0000337c                __lshrdi3
- .text.libgcc   0x000033b4       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3.o)
-                0x000033b4                __adddi3
- .text.libgcc   0x000033c6       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_subdi3.o)
-                0x000033c6                __subdi3
- .text.libgcc   0x000033d8       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_cmpdi2_s8.o)
-                0x000033d8                __cmpdi2_s8
- .text.libgcc.mul
-                0x000033f0       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x000033f0                __umulhisi3
+                0x0000359a       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_ashrdi3.o)
+                0x0000359a                __ashrdi3
+                0x0000359e                __lshrdi3
+ .text.libgcc   0x000035d6       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3.o)
+                0x000035d6                __adddi3
+ .text.libgcc   0x000035e8       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_subdi3.o)
+                0x000035e8                __subdi3
+ .text.libgcc   0x000035fa       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_cmpdi2_s8.o)
+                0x000035fa                __cmpdi2_s8
  .text.avr-libc
-                0x0000340e       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcmp.o)
-                0x0000340e                strcmp
-                0x00003420                . = ALIGN (0x2)
+                0x00003612       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcmp.o)
+                0x00003612                strcmp
+                0x00003624                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003420        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00003420                _exit
-                0x00003420                exit
+ .fini9         0x00003624        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00003624                _exit
+                0x00003624                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1236,11 +1243,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003420        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00003624        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003424                _etext = .
+                0x00003628                _etext = .
 
-.data           0x00800100      0x2cc load address 0x00003424
+.data           0x00800100      0x300 load address 0x00003628
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -1261,91 +1268,92 @@ END GROUP
  .rodata.str1.1
                 0x0080010e       0x17 Aplication/CMD/cmd.o
  .rodata.str1.1
-                0x00800125       0xcb Aplication/GUI/GUI.o
-                                 0xcd (size before relaxing)
+                0x00800125       0xe8 Aplication/GUI/GUI.o
+                                 0xea (size before relaxing)
  .rodata.str1.1
-                0x008001f0      0x1dc Core/src/main.o
+                0x0080020d      0x1f2 Core/src/main.o
  *(.gnu.linkonce.r*)
-                0x008003cc                . = ALIGN (0x2)
-                0x008003cc                _edata = .
-                0x008003cc                PROVIDE (__data_end, .)
+                0x00800400                . = ALIGN (0x2)
+ *fill*         0x008003ff        0x1 
+                0x00800400                _edata = .
+                0x00800400                PROVIDE (__data_end, .)
 
-.bss            0x008003cc       0xbb
-                0x008003cc                PROVIDE (__bss_start, .)
+.bss            0x00800400       0xbb
+                0x00800400                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.shiftCnt.1688
-                0x008003cc        0x1 Aplication/GUI/segmentDisplay.o
- .bss.myISRCnt.2543
-                0x008003cd        0x1 Core/src/main.o
+                0x00800400        0x1 Aplication/GUI/segmentDisplay.o
+ .bss.myISRCnt.2549
+                0x00800401        0x1 Core/src/main.o
  .bss.MY_MENU_state
-                0x008003ce        0x1 Core/src/main.o
-                0x008003ce                MY_MENU_state
+                0x00800402        0x1 Core/src/main.o
+                0x00800402                MY_MENU_state
  .bss.temperature
-                0x008003cf        0x4 Core/src/main.o
-                0x008003cf                temperature
+                0x00800403        0x4 Core/src/main.o
+                0x00800403                temperature
  .bss.activeResistance
-                0x008003d3        0x2 Core/src/main.o
-                0x008003d3                activeResistance
+                0x00800407        0x2 Core/src/main.o
+                0x00800407                activeResistance
  .bss.ADCreadout
-                0x008003d5        0x2 Core/src/main.o
-                0x008003d5                ADCreadout
+                0x00800409        0x2 Core/src/main.o
+                0x00800409                ADCreadout
  .bss.lapBuffer
-                0x008003d7        0x1 Core/src/main.o
-                0x008003d7                lapBuffer
+                0x0080040b        0x1 Core/src/main.o
+                0x0080040b                lapBuffer
  .bss.USART0_Flag
-                0x008003d8        0x1 Core/src/main.o
-                0x008003d8                USART0_Flag
+                0x0080040c        0x1 Core/src/main.o
+                0x0080040c                USART0_Flag
  .bss.myDisplayLap
-                0x008003d9        0x8 Core/src/main.o
-                0x008003d9                myDisplayLap
+                0x0080040d        0x8 Core/src/main.o
+                0x0080040d                myDisplayLap
  .bss.myDisplayTemperature
-                0x008003e1        0x8 Core/src/main.o
-                0x008003e1                myDisplayTemperature
+                0x00800415        0x8 Core/src/main.o
+                0x00800415                myDisplayTemperature
  .bss.myDisplayAlarm
-                0x008003e9        0x8 Core/src/main.o
-                0x008003e9                myDisplayAlarm
+                0x0080041d        0x8 Core/src/main.o
+                0x0080041d                myDisplayAlarm
  .bss.myDisplayChronometer
-                0x008003f1        0x8 Core/src/main.o
-                0x008003f1                myDisplayChronometer
+                0x00800425        0x8 Core/src/main.o
+                0x00800425                myDisplayChronometer
  .bss.myDisplayCountdown
-                0x008003f9        0x8 Core/src/main.o
-                0x008003f9                myDisplayCountdown
+                0x0080042d        0x8 Core/src/main.o
+                0x0080042d                myDisplayCountdown
  .bss.myDisplayClock
-                0x00800401        0x8 Core/src/main.o
-                0x00800401                myDisplayClock
- .bss.t_fine    0x00800409        0x4 Modules/BME280/BME280.o
-                0x00800409                t_fine
+                0x00800435        0x8 Core/src/main.o
+                0x00800435                myDisplayClock
+ .bss.t_fine    0x0080043d        0x4 Modules/BME280/BME280.o
+                0x0080043d                t_fine
  .bss.indexPage
-                0x0080040d        0x2 Modules/OLED/src/ssd1306.o
-                0x0080040d                indexPage
- .bss.indexCol  0x0080040f        0x2 Modules/OLED/src/ssd1306.o
-                0x0080040f                indexCol
+                0x00800441        0x2 Modules/OLED/src/ssd1306.o
+                0x00800441                indexPage
+ .bss.indexCol  0x00800443        0x2 Modules/OLED/src/ssd1306.o
+                0x00800443                indexCol
  *(COMMON)
- COMMON         0x00800411       0x76 Core/src/main.o
-                0x00800411                TimeMainClock
-                0x00800415                Compensation_Data
-                0x00800436                TimeMainLap
-                0x0080044a                USART_Buffer
-                0x00800455                TemperatureK
-                0x00800459                systemFlags
-                0x0080045a                BME280Env
-                0x00800466                myTemperatureData
-                0x0080046d                myPressureData
-                0x00800474                myHumidityData
-                0x0080047a                USER_CMD_state
-                0x0080047b                TimeMainCronometer
-                0x0080047f                TimeMainCountdown
-                0x00800483                TimeMainAlaram
-                0x00800487                PROVIDE (__bss_end, .)
-                0x00003424                __data_load_start = LOADADDR (.data)
-                0x000036f0                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800445       0x76 Core/src/main.o
+                0x00800445                TimeMainClock
+                0x00800449                Compensation_Data
+                0x0080046a                TimeMainLap
+                0x0080047e                USART_Buffer
+                0x00800489                TemperatureK
+                0x0080048d                systemFlags
+                0x0080048e                BME280Env
+                0x0080049a                myTemperatureData
+                0x008004a1                myPressureData
+                0x008004a8                myHumidityData
+                0x008004ae                USER_CMD_state
+                0x008004af                TimeMainCronometer
+                0x008004b3                TimeMainCountdown
+                0x008004b7                TimeMainAlaram
+                0x008004bb                PROVIDE (__bss_end, .)
+                0x00003628                __data_load_start = LOADADDR (.data)
+                0x00003928                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800487        0x0
+.noinit         0x008004bb        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800487                _end = .
+                0x008004bb                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -1427,7 +1435,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x438
+.debug_aranges  0x00000000      0x440
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 Aplication/Clock/clock.o
@@ -1438,124 +1446,124 @@ END GROUP
  .debug_aranges
                 0x00000060       0x20 Aplication/Cronometer/chronometer.o
  .debug_aranges
-                0x00000080       0x48 Aplication/GUI/GUI.o
+                0x00000080       0x50 Aplication/GUI/GUI.o
  .debug_aranges
-                0x000000c8       0x28 Aplication/GUI/segmentDisplay.o
+                0x000000d0       0x28 Aplication/GUI/segmentDisplay.o
  .debug_aranges
-                0x000000f0       0x28 Atmega328P_Driver/src/atmega328p_ADC.o
+                0x000000f8       0x28 Atmega328P_Driver/src/atmega328p_ADC.o
  .debug_aranges
-                0x00000118       0x20 Atmega328P_Driver/src/atmega328p_EXTI.o
+                0x00000120       0x20 Atmega328P_Driver/src/atmega328p_EXTI.o
  .debug_aranges
-                0x00000138       0x38 Atmega328P_Driver/src/atmega328p_GPIO.o
+                0x00000140       0x38 Atmega328P_Driver/src/atmega328p_GPIO.o
  .debug_aranges
-                0x00000170       0x50 Atmega328P_Driver/src/atmega328p_I2C.o
+                0x00000178       0x50 Atmega328P_Driver/src/atmega328p_I2C.o
  .debug_aranges
-                0x000001c0       0x40 Atmega328P_Driver/src/atmega328p_TIM.o
+                0x000001c8       0x40 Atmega328P_Driver/src/atmega328p_TIM.o
  .debug_aranges
-                0x00000200       0x30 Atmega328P_Driver/src/atmega328p_USART.o
+                0x00000208       0x30 Atmega328P_Driver/src/atmega328p_USART.o
  .debug_aranges
-                0x00000230       0x98 Core/src/main.o
+                0x00000238       0x98 Core/src/main.o
  .debug_aranges
-                0x000002c8       0x60 Modules/BME280/BME280.o
+                0x000002d0       0x60 Modules/BME280/BME280.o
  .debug_aranges
-                0x00000328       0x28 Modules/OLED/src/drawFunctions.o
+                0x00000330       0x28 Modules/OLED/src/drawFunctions.o
  .debug_aranges
-                0x00000350       0x18 Modules/OLED/src/font.o
+                0x00000358       0x18 Modules/OLED/src/font.o
  .debug_aranges
-                0x00000368       0x88 Modules/OLED/src/ssd1306.o
+                0x00000370       0x88 Modules/OLED/src/ssd1306.o
  .debug_aranges
-                0x000003f0       0x48 Modules/OLED/src/twi.o
+                0x000003f8       0x48 Modules/OLED/src/twi.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x4e74
+.debug_info     0x00000000     0x4fc8
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_info    0x000005f4       0xe9 Aplication/Clock/clock.o
  .debug_info    0x000006dd      0x253 Aplication/CMD/cmd.o
  .debug_info    0x00000930       0xe9 Aplication/Countdown/countdown.o
  .debug_info    0x00000a19       0xe9 Aplication/Cronometer/chronometer.o
- .debug_info    0x00000b02      0x7f8 Aplication/GUI/GUI.o
- .debug_info    0x000012fa      0x188 Aplication/GUI/segmentDisplay.o
- .debug_info    0x00001482       0xb7 Atmega328P_Driver/src/atmega328p_ADC.o
- .debug_info    0x00001539       0x82 Atmega328P_Driver/src/atmega328p_EXTI.o
- .debug_info    0x000015bb      0x14b Atmega328P_Driver/src/atmega328p_GPIO.o
- .debug_info    0x00001706      0x12a Atmega328P_Driver/src/atmega328p_I2C.o
- .debug_info    0x00001830      0x19f Atmega328P_Driver/src/atmega328p_TIM.o
- .debug_info    0x000019cf       0xfb Atmega328P_Driver/src/atmega328p_USART.o
- .debug_info    0x00001aca     0x1c4c Core/src/main.o
- .debug_info    0x00003716      0xb16 Modules/BME280/BME280.o
- .debug_info    0x0000422c      0x1c0 Modules/OLED/src/drawFunctions.o
- .debug_info    0x000043ec       0x9a Modules/OLED/src/font.o
- .debug_info    0x00004486      0x8aa Modules/OLED/src/ssd1306.o
- .debug_info    0x00004d30      0x144 Modules/OLED/src/twi.o
+ .debug_info    0x00000b02      0x899 Aplication/GUI/GUI.o
+ .debug_info    0x0000139b      0x188 Aplication/GUI/segmentDisplay.o
+ .debug_info    0x00001523       0xb7 Atmega328P_Driver/src/atmega328p_ADC.o
+ .debug_info    0x000015da       0x82 Atmega328P_Driver/src/atmega328p_EXTI.o
+ .debug_info    0x0000165c      0x14b Atmega328P_Driver/src/atmega328p_GPIO.o
+ .debug_info    0x000017a7      0x12a Atmega328P_Driver/src/atmega328p_I2C.o
+ .debug_info    0x000018d1      0x19f Atmega328P_Driver/src/atmega328p_TIM.o
+ .debug_info    0x00001a70       0xfb Atmega328P_Driver/src/atmega328p_USART.o
+ .debug_info    0x00001b6b     0x1cff Core/src/main.o
+ .debug_info    0x0000386a      0xb16 Modules/BME280/BME280.o
+ .debug_info    0x00004380      0x1c0 Modules/OLED/src/drawFunctions.o
+ .debug_info    0x00004540       0x9a Modules/OLED/src/font.o
+ .debug_info    0x000045da      0x8aa Modules/OLED/src/ssd1306.o
+ .debug_info    0x00004e84      0x144 Modules/OLED/src/twi.o
 
-.debug_abbrev   0x00000000     0x15ca
+.debug_abbrev   0x00000000     0x15e8
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_abbrev  0x000005a2       0x87 Aplication/Clock/clock.o
  .debug_abbrev  0x00000629       0xdd Aplication/CMD/cmd.o
  .debug_abbrev  0x00000706       0x87 Aplication/Countdown/countdown.o
  .debug_abbrev  0x0000078d       0x87 Aplication/Cronometer/chronometer.o
- .debug_abbrev  0x00000814      0x195 Aplication/GUI/GUI.o
- .debug_abbrev  0x000009a9       0xd5 Aplication/GUI/segmentDisplay.o
- .debug_abbrev  0x00000a7e       0x78 Atmega328P_Driver/src/atmega328p_ADC.o
- .debug_abbrev  0x00000af6       0x4f Atmega328P_Driver/src/atmega328p_EXTI.o
- .debug_abbrev  0x00000b45       0xcb Atmega328P_Driver/src/atmega328p_GPIO.o
- .debug_abbrev  0x00000c10       0x92 Atmega328P_Driver/src/atmega328p_I2C.o
- .debug_abbrev  0x00000ca2       0xc1 Atmega328P_Driver/src/atmega328p_TIM.o
- .debug_abbrev  0x00000d63       0x9f Atmega328P_Driver/src/atmega328p_USART.o
- .debug_abbrev  0x00000e02      0x31f Core/src/main.o
- .debug_abbrev  0x00001121      0x147 Modules/BME280/BME280.o
- .debug_abbrev  0x00001268       0xc1 Modules/OLED/src/drawFunctions.o
- .debug_abbrev  0x00001329       0x5d Modules/OLED/src/font.o
- .debug_abbrev  0x00001386      0x1ae Modules/OLED/src/ssd1306.o
- .debug_abbrev  0x00001534       0x96 Modules/OLED/src/twi.o
+ .debug_abbrev  0x00000814      0x1b3 Aplication/GUI/GUI.o
+ .debug_abbrev  0x000009c7       0xd5 Aplication/GUI/segmentDisplay.o
+ .debug_abbrev  0x00000a9c       0x78 Atmega328P_Driver/src/atmega328p_ADC.o
+ .debug_abbrev  0x00000b14       0x4f Atmega328P_Driver/src/atmega328p_EXTI.o
+ .debug_abbrev  0x00000b63       0xcb Atmega328P_Driver/src/atmega328p_GPIO.o
+ .debug_abbrev  0x00000c2e       0x92 Atmega328P_Driver/src/atmega328p_I2C.o
+ .debug_abbrev  0x00000cc0       0xc1 Atmega328P_Driver/src/atmega328p_TIM.o
+ .debug_abbrev  0x00000d81       0x9f Atmega328P_Driver/src/atmega328p_USART.o
+ .debug_abbrev  0x00000e20      0x31f Core/src/main.o
+ .debug_abbrev  0x0000113f      0x147 Modules/BME280/BME280.o
+ .debug_abbrev  0x00001286       0xc1 Modules/OLED/src/drawFunctions.o
+ .debug_abbrev  0x00001347       0x5d Modules/OLED/src/font.o
+ .debug_abbrev  0x000013a4      0x1ae Modules/OLED/src/ssd1306.o
+ .debug_abbrev  0x00001552       0x96 Modules/OLED/src/twi.o
 
-.debug_line     0x00000000     0x2a4c
+.debug_line     0x00000000     0x2ac5
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_line    0x00000134       0xfa Aplication/Clock/clock.o
  .debug_line    0x0000022e      0x126 Aplication/CMD/cmd.o
  .debug_line    0x00000354      0x126 Aplication/Countdown/countdown.o
  .debug_line    0x0000047a      0x117 Aplication/Cronometer/chronometer.o
- .debug_line    0x00000591      0x4b1 Aplication/GUI/GUI.o
- .debug_line    0x00000a42      0x14d Aplication/GUI/segmentDisplay.o
- .debug_line    0x00000b8f       0xf9 Atmega328P_Driver/src/atmega328p_ADC.o
- .debug_line    0x00000c88       0xc4 Atmega328P_Driver/src/atmega328p_EXTI.o
- .debug_line    0x00000d4c      0x13c Atmega328P_Driver/src/atmega328p_GPIO.o
- .debug_line    0x00000e88      0x197 Atmega328P_Driver/src/atmega328p_I2C.o
- .debug_line    0x0000101f      0x1d8 Atmega328P_Driver/src/atmega328p_TIM.o
- .debug_line    0x000011f7      0x129 Atmega328P_Driver/src/atmega328p_USART.o
- .debug_line    0x00001320      0x9ff Core/src/main.o
- .debug_line    0x00001d1f      0x4bc Modules/BME280/BME280.o
- .debug_line    0x000021db      0x104 Modules/OLED/src/drawFunctions.o
- .debug_line    0x000022df       0x9a Modules/OLED/src/font.o
- .debug_line    0x00002379      0x506 Modules/OLED/src/ssd1306.o
- .debug_line    0x0000287f      0x1cd Modules/OLED/src/twi.o
+ .debug_line    0x00000591      0x516 Aplication/GUI/GUI.o
+ .debug_line    0x00000aa7      0x14d Aplication/GUI/segmentDisplay.o
+ .debug_line    0x00000bf4       0xf9 Atmega328P_Driver/src/atmega328p_ADC.o
+ .debug_line    0x00000ced       0xc4 Atmega328P_Driver/src/atmega328p_EXTI.o
+ .debug_line    0x00000db1      0x13c Atmega328P_Driver/src/atmega328p_GPIO.o
+ .debug_line    0x00000eed      0x197 Atmega328P_Driver/src/atmega328p_I2C.o
+ .debug_line    0x00001084      0x1d8 Atmega328P_Driver/src/atmega328p_TIM.o
+ .debug_line    0x0000125c      0x129 Atmega328P_Driver/src/atmega328p_USART.o
+ .debug_line    0x00001385      0xa13 Core/src/main.o
+ .debug_line    0x00001d98      0x4bc Modules/BME280/BME280.o
+ .debug_line    0x00002254      0x104 Modules/OLED/src/drawFunctions.o
+ .debug_line    0x00002358       0x9a Modules/OLED/src/font.o
+ .debug_line    0x000023f2      0x506 Modules/OLED/src/ssd1306.o
+ .debug_line    0x000028f8      0x1cd Modules/OLED/src/twi.o
 
-.debug_frame    0x00000000      0xb10
+.debug_frame    0x00000000      0xb48
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 Aplication/Clock/clock.o
  .debug_frame   0x00000024       0x38 Aplication/CMD/cmd.o
  .debug_frame   0x0000005c       0x24 Aplication/Countdown/countdown.o
  .debug_frame   0x00000080       0x24 Aplication/Cronometer/chronometer.o
- .debug_frame   0x000000a4      0x148 Aplication/GUI/GUI.o
- .debug_frame   0x000001ec       0x40 Aplication/GUI/segmentDisplay.o
- .debug_frame   0x0000022c       0x34 Atmega328P_Driver/src/atmega328p_ADC.o
- .debug_frame   0x00000260       0x24 Atmega328P_Driver/src/atmega328p_EXTI.o
- .debug_frame   0x00000284       0x54 Atmega328P_Driver/src/atmega328p_GPIO.o
- .debug_frame   0x000002d8       0x84 Atmega328P_Driver/src/atmega328p_I2C.o
- .debug_frame   0x0000035c       0x64 Atmega328P_Driver/src/atmega328p_TIM.o
- .debug_frame   0x000003c0       0x44 Atmega328P_Driver/src/atmega328p_USART.o
- .debug_frame   0x00000404      0x304 Core/src/main.o
- .debug_frame   0x00000708      0x1c0 Modules/BME280/BME280.o
- .debug_frame   0x000008c8       0x48 Modules/OLED/src/drawFunctions.o
- .debug_frame   0x00000910      0x18c Modules/OLED/src/ssd1306.o
- .debug_frame   0x00000a9c       0x74 Modules/OLED/src/twi.o
+ .debug_frame   0x000000a4      0x180 Aplication/GUI/GUI.o
+ .debug_frame   0x00000224       0x40 Aplication/GUI/segmentDisplay.o
+ .debug_frame   0x00000264       0x34 Atmega328P_Driver/src/atmega328p_ADC.o
+ .debug_frame   0x00000298       0x24 Atmega328P_Driver/src/atmega328p_EXTI.o
+ .debug_frame   0x000002bc       0x54 Atmega328P_Driver/src/atmega328p_GPIO.o
+ .debug_frame   0x00000310       0x84 Atmega328P_Driver/src/atmega328p_I2C.o
+ .debug_frame   0x00000394       0x64 Atmega328P_Driver/src/atmega328p_TIM.o
+ .debug_frame   0x000003f8       0x44 Atmega328P_Driver/src/atmega328p_USART.o
+ .debug_frame   0x0000043c      0x304 Core/src/main.o
+ .debug_frame   0x00000740      0x1c0 Modules/BME280/BME280.o
+ .debug_frame   0x00000900       0x48 Modules/OLED/src/drawFunctions.o
+ .debug_frame   0x00000948      0x18c Modules/OLED/src/ssd1306.o
+ .debug_frame   0x00000ad4       0x74 Modules/OLED/src/twi.o
 
-.debug_str      0x00000000     0x158c
+.debug_str      0x00000000     0x15c9
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_str     0x00000208      0x174 Aplication/Clock/clock.o
@@ -1566,53 +1574,53 @@ END GROUP
                                 0x1c3 (size before relaxing)
  .debug_str     0x00000751       0x37 Aplication/Cronometer/chronometer.o
                                 0x1c8 (size before relaxing)
- .debug_str     0x00000788      0x294 Aplication/GUI/GUI.o
-                                0x486 (size before relaxing)
- .debug_str     0x00000a1c       0x79 Aplication/GUI/segmentDisplay.o
+ .debug_str     0x00000788      0x315 Aplication/GUI/GUI.o
+                                0x4be (size before relaxing)
+ .debug_str     0x00000a9d       0x79 Aplication/GUI/segmentDisplay.o
                                 0x212 (size before relaxing)
- .debug_str     0x00000a95       0x83 Atmega328P_Driver/src/atmega328p_ADC.o
+ .debug_str     0x00000b16       0x7a Atmega328P_Driver/src/atmega328p_ADC.o
                                 0x19d (size before relaxing)
- .debug_str     0x00000b18       0x81 Atmega328P_Driver/src/atmega328p_EXTI.o
+ .debug_str     0x00000b90       0x38 Atmega328P_Driver/src/atmega328p_EXTI.o
                                 0x19b (size before relaxing)
- .debug_str     0x00000b99       0x88 Atmega328P_Driver/src/atmega328p_GPIO.o
+ .debug_str     0x00000bc8       0x88 Atmega328P_Driver/src/atmega328p_GPIO.o
                                 0x1eb (size before relaxing)
- .debug_str     0x00000c21       0x90 Atmega328P_Driver/src/atmega328p_I2C.o
+ .debug_str     0x00000c50       0x90 Atmega328P_Driver/src/atmega328p_I2C.o
                                 0x1f3 (size before relaxing)
- .debug_str     0x00000cb1       0xcb Atmega328P_Driver/src/atmega328p_TIM.o
+ .debug_str     0x00000ce0       0xcb Atmega328P_Driver/src/atmega328p_TIM.o
                                 0x21a (size before relaxing)
- .debug_str     0x00000d7c       0x70 Atmega328P_Driver/src/atmega328p_USART.o
+ .debug_str     0x00000dab       0x70 Atmega328P_Driver/src/atmega328p_USART.o
                                 0x1f7 (size before relaxing)
- .debug_str     0x00000dec      0x484 Core/src/main.o
-                                0xcb7 (size before relaxing)
- .debug_str     0x00001270       0xca Modules/BME280/BME280.o
+ .debug_str     0x00000e1b      0x492 Core/src/main.o
+                                0xcdb (size before relaxing)
+ .debug_str     0x000012ad       0xca Modules/BME280/BME280.o
                                 0x445 (size before relaxing)
- .debug_str     0x0000133a       0x76 Modules/OLED/src/drawFunctions.o
+ .debug_str     0x00001377       0x76 Modules/OLED/src/drawFunctions.o
                                 0x21a (size before relaxing)
- .debug_str     0x000013b0       0x21 Modules/OLED/src/font.o
+ .debug_str     0x000013ed       0x21 Modules/OLED/src/font.o
                                 0x170 (size before relaxing)
- .debug_str     0x000013d1      0x188 Modules/OLED/src/ssd1306.o
+ .debug_str     0x0000140e      0x188 Modules/OLED/src/ssd1306.o
                                 0x396 (size before relaxing)
- .debug_str     0x00001559       0x33 Modules/OLED/src/twi.o
+ .debug_str     0x00001596       0x33 Modules/OLED/src/twi.o
                                 0x1c4 (size before relaxing)
 
-.debug_loc      0x00000000     0x2c27
+.debug_loc      0x00000000     0x2e0b
  *(.debug_loc)
  .debug_loc     0x00000000       0x28 Aplication/Clock/clock.o
  .debug_loc     0x00000028      0x105 Aplication/CMD/cmd.o
  .debug_loc     0x0000012d       0x28 Aplication/Countdown/countdown.o
  .debug_loc     0x00000155       0x28 Aplication/Cronometer/chronometer.o
- .debug_loc     0x0000017d      0x592 Aplication/GUI/GUI.o
- .debug_loc     0x0000070f       0xcd Aplication/GUI/segmentDisplay.o
- .debug_loc     0x000007dc       0x21 Atmega328P_Driver/src/atmega328p_ADC.o
- .debug_loc     0x000007fd       0x28 Atmega328P_Driver/src/atmega328p_GPIO.o
- .debug_loc     0x00000825       0x4e Atmega328P_Driver/src/atmega328p_I2C.o
- .debug_loc     0x00000873       0xf9 Atmega328P_Driver/src/atmega328p_TIM.o
- .debug_loc     0x0000096c       0x47 Atmega328P_Driver/src/atmega328p_USART.o
- .debug_loc     0x000009b3      0xa41 Core/src/main.o
- .debug_loc     0x000013f4      0xc5b Modules/BME280/BME280.o
- .debug_loc     0x0000204f      0x137 Modules/OLED/src/drawFunctions.o
- .debug_loc     0x00002186      0xa32 Modules/OLED/src/ssd1306.o
- .debug_loc     0x00002bb8       0x6f Modules/OLED/src/twi.o
+ .debug_loc     0x0000017d      0x6b6 Aplication/GUI/GUI.o
+ .debug_loc     0x00000833       0xcd Aplication/GUI/segmentDisplay.o
+ .debug_loc     0x00000900       0x21 Atmega328P_Driver/src/atmega328p_ADC.o
+ .debug_loc     0x00000921       0x28 Atmega328P_Driver/src/atmega328p_GPIO.o
+ .debug_loc     0x00000949       0x4e Atmega328P_Driver/src/atmega328p_I2C.o
+ .debug_loc     0x00000997       0xf9 Atmega328P_Driver/src/atmega328p_TIM.o
+ .debug_loc     0x00000a90       0x47 Atmega328P_Driver/src/atmega328p_USART.o
+ .debug_loc     0x00000ad7      0xb01 Core/src/main.o
+ .debug_loc     0x000015d8      0xc5b Modules/BME280/BME280.o
+ .debug_loc     0x00002233      0x137 Modules/OLED/src/drawFunctions.o
+ .debug_loc     0x0000236a      0xa32 Modules/OLED/src/ssd1306.o
+ .debug_loc     0x00002d9c       0x6f Modules/OLED/src/twi.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1632,25 +1640,25 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x358
+.debug_ranges   0x00000000      0x360
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 Aplication/Clock/clock.o
  .debug_ranges  0x00000010       0x10 Aplication/CMD/cmd.o
  .debug_ranges  0x00000020       0x10 Aplication/Countdown/countdown.o
  .debug_ranges  0x00000030       0x10 Aplication/Cronometer/chronometer.o
- .debug_ranges  0x00000040       0x38 Aplication/GUI/GUI.o
- .debug_ranges  0x00000078       0x18 Aplication/GUI/segmentDisplay.o
- .debug_ranges  0x00000090       0x18 Atmega328P_Driver/src/atmega328p_ADC.o
- .debug_ranges  0x000000a8       0x10 Atmega328P_Driver/src/atmega328p_EXTI.o
- .debug_ranges  0x000000b8       0x28 Atmega328P_Driver/src/atmega328p_GPIO.o
- .debug_ranges  0x000000e0       0x40 Atmega328P_Driver/src/atmega328p_I2C.o
- .debug_ranges  0x00000120       0x30 Atmega328P_Driver/src/atmega328p_TIM.o
- .debug_ranges  0x00000150       0x20 Atmega328P_Driver/src/atmega328p_USART.o
- .debug_ranges  0x00000170       0xb8 Core/src/main.o
- .debug_ranges  0x00000228       0x50 Modules/BME280/BME280.o
- .debug_ranges  0x00000278       0x18 Modules/OLED/src/drawFunctions.o
- .debug_ranges  0x00000290       0x90 Modules/OLED/src/ssd1306.o
- .debug_ranges  0x00000320       0x38 Modules/OLED/src/twi.o
+ .debug_ranges  0x00000040       0x40 Aplication/GUI/GUI.o
+ .debug_ranges  0x00000080       0x18 Aplication/GUI/segmentDisplay.o
+ .debug_ranges  0x00000098       0x18 Atmega328P_Driver/src/atmega328p_ADC.o
+ .debug_ranges  0x000000b0       0x10 Atmega328P_Driver/src/atmega328p_EXTI.o
+ .debug_ranges  0x000000c0       0x28 Atmega328P_Driver/src/atmega328p_GPIO.o
+ .debug_ranges  0x000000e8       0x40 Atmega328P_Driver/src/atmega328p_I2C.o
+ .debug_ranges  0x00000128       0x30 Atmega328P_Driver/src/atmega328p_TIM.o
+ .debug_ranges  0x00000158       0x20 Atmega328P_Driver/src/atmega328p_USART.o
+ .debug_ranges  0x00000178       0xb8 Core/src/main.o
+ .debug_ranges  0x00000230       0x50 Modules/BME280/BME280.o
+ .debug_ranges  0x00000280       0x18 Modules/OLED/src/drawFunctions.o
+ .debug_ranges  0x00000298       0x90 Modules/OLED/src/ssd1306.o
+ .debug_ranges  0x00000328       0x38 Modules/OLED/src/twi.o
 
 .debug_macro
  *(.debug_macro)

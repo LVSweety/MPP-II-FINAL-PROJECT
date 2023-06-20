@@ -251,3 +251,21 @@ void GUI_DrawEnvOutput(Enviroment_t BME280Env, Time_t TimeMainClock){
 	
 	USART_Transmit_String(packetString);
 }
+
+void GUI_DrawVoltageOutput(uint16_t ADCvalue, Time_t TimeMainClock, uint8_t channel){
+	uint8_t *packetString = "[00:00:00]|U:0.000 V|ADC 0|\n";
+	uint16_t voltage = (uint16_t)(((uint32_t)ADCvalue * (uint32_t)1000)/(uint32_t)204);
+	
+	packetString[1] = TimeMainClock.hours/10 + 48;
+	packetString[2] = TimeMainClock.hours%10 + 48;
+	packetString[4] = TimeMainClock.minutes/10 + 48;
+	packetString[5] = TimeMainClock.minutes%10 + 48;
+	packetString[7] = TimeMainClock.seconds/10 + 48;
+	packetString[8] = TimeMainClock.seconds%10 + 48;
+	packetString[13] = voltage / 1000 + 48;
+	packetString[15] = (voltage % 1000) / 100 + 48;
+	packetString[16] = (voltage % 100) / 10 + 48;
+	packetString[17] = voltage % 10 + 48;
+	packetString[25] = channel;
+	USART_Transmit_String(packetString);
+}
